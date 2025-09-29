@@ -1,5 +1,8 @@
- creating an in-memory virtual DOM rather than directly manipulating the browser’s DOM. 
- performs necessary manipulations within this virtual representation before applying changes to the actual browser DOM.
+# Introduction
+
+## React
+ - creating an in-memory virtual DOM rather than directly manipulating the browser’s DOM. 
+ - performs necessary manipulations within this virtual representation before applying changes to the actual browser DOM.
 
 
 ## Here’s how the process works:
