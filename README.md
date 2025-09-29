@@ -2,7 +2,7 @@
  performs necessary manipulations within this virtual representation before applying changes to the actual browser DOM.
 
 
-##Here’s how the process works:
+## Here’s how the process works:
 
 # 1. Actual DOM and Virtual DOM
 
