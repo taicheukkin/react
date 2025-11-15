@@ -125,7 +125,7 @@ Functional components are the fundamental building blocks for creating user inte
 **Steps:**
 1.  **Initialization:** React runs the function body, setting up the component's structure and behavior
 2.  **State Initialization:** `useState` hook declares and initializes state variables
-3.  **Side Effects:** `useEffect` with empty dependency array executes once after initial render
+3.  **Side Effects:** `useEffect` with empty dependency[] array executes once after initial render
 
 **Example:**
 ```jsx
