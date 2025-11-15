@@ -88,3 +88,31 @@ An `onClick` handler on a button can trigger an alert that displays the current 
 *   **State** is internal, mutable data managed by the component itself.
 *   **Props** are external, immutable data passed down from a parent component.
 *   **Events** are handled by defining methods and attaching them to JSX elements.
+Based on the video transcript, here is a summary of the React Class Component Lifecycle.
+
+### Summary: Class Component Lifecycle
+
+#### 1. What is the Component Lifecycle?
+The lifecycle of a React class component describes its relationship with the DOM, from creation to removal. It consists of three main phases:
+1.  **Mounting:** The component is created and inserted into the DOM.
+<img width="555" height="511" alt="image" src="https://github.com/user-attachments/assets/0cfd3052-3149-4ccf-9c5c-9c4c2fc9f059" />
+
+3.  **Updating:** The component re-renders due to changes in state or props.
+<img width="2215" height="1172" alt="image" src="https://github.com/user-attachments/assets/2a870620-3900-4c63-a4af-2247f27ae50c" />
+
+  
+5.  **Unmounting:** The component is removed from the DOM.
+<img width="974" height="507" alt="image" src="https://github.com/user-attachments/assets/260f2fdb-ac05-436b-9993-1b9d2d32ef81" />
+
+#### 2. Lifecycle Phases and Methods
+
+| Phase | Description | Key Lifecycle Methods |
+| :--- | :--- | :--- |
+| **Mounting** | The component is instantiated and rendered for the first time. | • **`componentWillMount`**: Called right before the first `render`.<br>• **`render`**: (Called in all phases) Returns the JSX to be rendered.<br>• **`componentDidMount`**: Called right after the first `render`. Ideal for side effects like network requests. |
+| **Updating** | Triggered by changes to state or props. The component re-renders. | • **`getDerivedStateFromProps`**: Updates state based on changed props.<br>• **`getSnapshotBeforeUpdate`**: Captures information from the DOM before an update.<br>• **`render`**: Updates the component in the UI.<br>• **`componentDidUpdate`**: Called after the update is committed to the DOM. Used for side effects. |
+| **Unmounting** | The component is removed from the page and destroyed. | • **`componentWillUnmount`**: The only method in this phase. Used for cleanup (e.g., canceling network requests, removing event listeners). |
+
+### Key Takeaways
+*   React **automatically calls** these lifecycle methods at the appropriate times.
+*   Developers can **override these methods** to gain control over the component's behavior at specific points in its life.
+*   The **`render`** method is the only required method and is called in both the **Mounting** and **Updating** phases.
